@@ -15,7 +15,6 @@ public class HeapSort {
         HeapSort sort = new HeapSort();
         sort.sort(arr,6);
         System.out.println(Arrays.toString(arr));
-//        System.out.println("次数：" + loop);
     }
 
     // a 表示数组，n 表示数组大小
