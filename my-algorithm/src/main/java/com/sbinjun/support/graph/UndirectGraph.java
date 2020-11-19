@@ -31,7 +31,7 @@ public class UndirectGraph {
     }
 
     // 搜索一条从 s 到 t 的路径
-    // 深度优先搜索
+    // 广度优先搜索
     public void bfs(int s,int t){
         if (s == t) return;
 
