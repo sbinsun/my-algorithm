@@ -104,7 +104,7 @@ public class UndirectGraph {
     }
 
     private void print(int[] prev, int s, int t) {
-        if (s != t) {
+        if (prev[t] != -1 && s != t) {
             print(prev, s, prev[t]);
         }
         System.out.print(t + " ");
@@ -122,9 +122,9 @@ public class UndirectGraph {
         graph.addEdge(4,6);
         graph.addEdge(5,7);
         graph.addEdge(6,7);
-//        graph.bfs(0,6);
+        graph.bfs(0,6);
 
-        graph.dfs(0,6);
+//        graph.dfs(0,6);
     }
 }
 
