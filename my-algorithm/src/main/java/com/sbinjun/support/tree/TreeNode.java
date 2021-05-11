@@ -1,7 +1,7 @@
 package com.sbinjun.support.tree;
 
 
-class TreeNode {
+public class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;
