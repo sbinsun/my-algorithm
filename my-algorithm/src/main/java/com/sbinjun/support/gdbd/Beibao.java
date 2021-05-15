@@ -30,6 +30,7 @@ public class Beibao {
     public void backTracking2(int i,int cw,int cv){
         if (cw >= w || i == n){
             if (cv > maxW) maxW = cv;
+            return;
         }
 
         backTracking2(i + 1,cw,cv);
@@ -156,9 +157,14 @@ public class Beibao {
     
     public static void main(String[] args) {
         Beibao beibao = new Beibao();
-//        beibao.backTracking(0,0);
+        beibao.backTracking(0,0);
+        System.out.println("maxV: " + beibao.maxW);
+
+//        beibao.backTracking2(0,0,0);
+//        System.out.println("maxV: " + beibao.maxW);
+
 //        System.out.println(beibao.dynamic());
-        System.out.println(beibao.dynamic2());
+//        System.out.println(beibao.dynamic2());
 //        System.out.println(beibao.knapsack3());
     }
 
