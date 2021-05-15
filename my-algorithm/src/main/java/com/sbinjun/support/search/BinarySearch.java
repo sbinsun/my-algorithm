@@ -5,11 +5,11 @@ public class BinarySearch {
     public static void main(String[] args) {
         BinarySearch binarySearch = new BinarySearch();
 //        int[] a = new int[]{1, 2, 4, 4, 5, 6,7,8};
-//        System.out.println("result: " + binarySearch.binary(a,8,8));
-//        System.out.println("result: " + binarySearch.binary1(a,8,8));
-//        System.out.println("result: " + binarySearch.binary2(a,8,8));
-//        System.out.println("result: " + binarySearch.binary3(a,8,4));
-//        System.out.println("result: " + binarySearch.binary4(a,8,7));
+//        System.out.println("result: " + binary(a,8,8));
+//        System.out.println("result: " + binary1(a,8,8));
+//        System.out.println("result: " + binary2(a,8,8));
+//        System.out.println("result: " + binary3(a,8,4));
+//        System.out.println("result: " + binary4(a,8,7));
 
         int[] a = new int[]{5,1,3};
         System.out.println("result: " + binarySearch.search(a,1));
