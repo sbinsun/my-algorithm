@@ -3,6 +3,8 @@ package com.sbinjun.support.gdbd;
 /**
  * 回溯算法
  * 八皇后
+ * 有一个 8x8 的棋盘，希望往里放 8 个棋子（皇后），每个棋子所在的行、列、对角线
+ * 都不能有另一个棋子。八皇后问题就是期望找到所有满足这种要求的放棋子方式。
  */
 public class EightQueen {
 
