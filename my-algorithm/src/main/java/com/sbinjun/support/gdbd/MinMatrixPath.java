@@ -7,7 +7,7 @@ package com.sbinjun.support.gdbd;
  * 1 3 5 9
  * 2 1 3 4
  * 5 2 6 7
- *  6 8 4 3
+ * 6 8 4 3
  */
 // 回溯解
 // 动态规划解
