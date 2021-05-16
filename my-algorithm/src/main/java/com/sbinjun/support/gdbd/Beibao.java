@@ -20,9 +20,9 @@ public class Beibao {
             if (cw > maxW) maxW = cw;
             return;
         }
-        backTracking(i+1, cw);
+        backTracking(i+1, cw);  // 不放第I个物品
         if (cw + items[i] <= w) {// 已经超过可以背包承受的重量的时候,就不要再装了
-            backTracking(i+1,cw + items[i]);
+            backTracking(i+1,cw + items[i]);  // 放第I个物品
         }
     }
 
@@ -33,9 +33,9 @@ public class Beibao {
             return;
         }
 
-        backTracking2(i + 1,cw,cv);
+        backTracking2(i + 1,cw,cv); // 不放第I个物品
         if ((cw + items[i]) <= w){
-            backTracking2(i + 1, cw + items[i],cv + value[i]);
+            backTracking2(i + 1, cw + items[i],cv + value[i]); // 放第I个物品
         }
     }
 
@@ -62,8 +62,8 @@ public class Beibao {
 //            这样写也行？
 //            for (int j = 0; j <= w; j++) {
 //                if (stattes[i - 1][j]) {
-//                    stattes[i][j] = true;
-//                    if (j + items[i] <= w) {
+//                    stattes[i][j] = true;  // 不放第I个物品
+//                    if (j + items[i] <= w) {  // 满足重量情况下，放第I个物品
 //                        stattes[i][j + items[i]] = true;
 //                    }
 //                }
