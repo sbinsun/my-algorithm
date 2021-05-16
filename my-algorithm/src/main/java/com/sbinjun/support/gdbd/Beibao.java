@@ -58,6 +58,16 @@ public class Beibao {
                     states[i][j + items[i]] = true; // 放第i个物品
                 }
             }
+
+//            这样写也行？
+//            for (int j = 0; j <= w; j++) {
+//                if (stattes[i - 1][j]) {
+//                    stattes[i][j] = true;
+//                    if (j + items[i] <= w) {
+//                        stattes[i][j + items[i]] = true;
+//                    }
+//                }
+//            }
         }
 
         print(states);
