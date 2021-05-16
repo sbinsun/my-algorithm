@@ -68,42 +68,6 @@ public class Beibao {
     }
 
     // 背包升级版,加上价值
-    public int dynamic2(){
-        int[][] states = new int[n][w + 1];
-        for (int i = 0; i < n; ++i) { // 初始化 states
-            for (int j = 0; j < w+1; ++j) {
-                states[i][j] = -1;
-            }
-        }
-
-        // 初始化第0个物品的状态
-        states[0][0] = 0;            // 不放第0个物品
-        states[0][items[0]] = value[0]; // 放第0个物品
-        for (int i = 1; i < n; i++) {
-            for (int j = 0; j <= w; j++) {
-                if (states[i -1][j] >= 0) states[i][j] = states[i -1][j]; // 不放第i个物品
-            }
-
-            for (int j = 0; j <= (w - items[i]); j++) {
-                if (states[i -1][j] >= 0) {
-                    int v = states[i-1][j] + value[i];
-                    if (v > states[i][j+items[i]]) {
-                        states[i][j+items[i]] = v;
-                    }
-                }
-            }
-        }
-
-        print2(states);
-
-        // 找出最大值
-        int maxvalue = -1;
-        for (int j = 0; j <= w; ++j) {
-            if (states[n-1][j] > maxvalue) maxvalue = states[n-1][j];
-        }
-        return maxvalue;
-    }
-
     public int knapsack3() {
         int[][] states = new int[n][w+1];
         for (int i = 0; i < n; ++i) { // 初始化 states
@@ -157,13 +121,13 @@ public class Beibao {
     
     public static void main(String[] args) {
         Beibao beibao = new Beibao();
-        beibao.backTracking(0,0);
-        System.out.println("maxV: " + beibao.maxW);
+//        beibao.backTracking(0,0);
+//        System.out.println("maxV: " + beibao.maxW);
 
 //        beibao.backTracking2(0,0,0);
 //        System.out.println("maxV: " + beibao.maxW);
 
-//        System.out.println(beibao.dynamic());
+        System.out.println(beibao.dynamic());
 //        System.out.println(beibao.dynamic2());
 //        System.out.println(beibao.knapsack3());
     }
