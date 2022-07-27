@@ -18,11 +18,11 @@ public class MinMatrixPath {
     public static void main(String[] args) {
         MinMatrixPath minMatrixPath = new MinMatrixPath();
         minMatrixPath.matrix = new int[][]{{1,3,5,9},{2,1,3,4},{5,2,6,7},{6,8,4,3}};
-        minMatrixPath.setMinDistBt(0,0,1);
+//        minMatrixPath.setMinDistBt(0,0,1);
 //        minMatrixPath.setMinDistDPTable();
-        System.out.println(minMatrixPath.minDist);
+//        System.out.println(minMatrixPath.minDist);
 
-//        System.out.println(minMatrixPath.setMinDistDPFun(4 - 1,4 - 1));
+        System.out.println(minMatrixPath.setMinDistDPFun(4 - 1,4 - 1));
     }
 
     // 回溯解
