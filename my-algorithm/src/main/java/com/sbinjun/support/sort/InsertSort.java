@@ -2,7 +2,10 @@ package com.sbinjun.support.sort;
 
 import java.util.Arrays;
 
-// 插入排序
+/**
+ * 插入排序
+ * 原地，稳定
+ */
 public class InsertSort {
 
     private static int loop = 0;

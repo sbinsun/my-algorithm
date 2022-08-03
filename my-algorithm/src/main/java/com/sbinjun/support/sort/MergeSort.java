@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 归并排序
+ * 非原地，稳定
  */
 public class MergeSort {
 

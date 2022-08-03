@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 堆排序
+ * 原地，非稳定
  */
 public class HeapSort {
 
@@ -43,12 +44,14 @@ public class HeapSort {
     }
 
     private void heapify(int[] a, int k,int n) {
-        int maxPos = k;
-        if ((2*k + 1) < n && a[k] < a[(2*k + 1)]) maxPos = 2*k + 1;
-        if ((2*k + 2) < n && a[maxPos] < a[(2*k + 2)]) maxPos = 2*k + 2;
-        if ( maxPos == k) return;
-        swap(a, maxPos, k);
-        heapify(a,maxPos,n);
+        while (true) {
+            int maxPos = k;
+            if ((2*k + 1) < n && a[k] < a[(2*k + 1)]) maxPos = 2*k + 1;
+            if ((2*k + 2) < n && a[maxPos] < a[(2*k + 2)]) maxPos = 2*k + 2;
+            if ( maxPos == k) return;
+            swap(a, maxPos, k);
+            heapify(a,maxPos,n);
+        }
     }
 
     private void swap(int[] a, int left, int k) {

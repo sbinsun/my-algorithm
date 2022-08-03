@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 选择排序
+ * 原地，稳定
  */
 public class SelectSort {
 

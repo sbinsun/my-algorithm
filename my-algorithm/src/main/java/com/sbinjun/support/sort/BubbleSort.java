@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /**
  * 冒泡排序
+ *  原地，非稳定
  */
 public class BubbleSort {
 
